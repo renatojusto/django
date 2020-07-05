@@ -1,15 +1,15 @@
 from django.shortcuts import render
 
 # Create your views here.
-from app.models import Class
+from app.models import Aula
 
 
-def class_list(request):
-    classes = Class.objects.all();
+def aula_list(request):
+    aulas = Aula.objects.all();
     return render(
         request,
-        'class_list.html',
+        'aula_list.html',
         {
-            'classes': classes
+            'aulas': aulas
         }
     )

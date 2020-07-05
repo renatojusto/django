@@ -12,11 +12,11 @@ DEFAULT_CLASSES_TYPES = (
 )
 
 def add_class_types(apps, schema_editor):
-    ClassType = apps.get_model('myapp', 'DogType')
+    Aula = apps.get_model('app', 'Aula')
 
-    for name, max_height in DEFAULT_CLASSES_TYPES:
-        dog_type = ClassType(name=name, max_height=max_height)
-        dog_type.save()
+    for name, date in DEFAULT_CLASSES_TYPES:
+        aula = Aula(name=name, date=date)
+        aula.save()
 
 
 class Migration(migrations.Migration):
